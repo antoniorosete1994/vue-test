@@ -4,4 +4,10 @@ import vue from '@vitejs/plugin-vue'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  server: {
+    host: '0.0.0.0',
+    port: 3001,
+    // Permite cualquier subdominio *.feedback.com.mx (el punto inicial habilita los subdominios)
+    allowedHosts: ['.feedback.com.mx'],
+  },
 })
